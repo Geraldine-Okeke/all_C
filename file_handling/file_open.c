@@ -2,6 +2,11 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
+/*
+ *this is a program to open a file , write into it and close
+ * if fp is NULL, exit
+ *return 0;
+ */
 int main()
 {
 	FILE* fp;
