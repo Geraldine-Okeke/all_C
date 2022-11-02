@@ -3,9 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/wait.h>
 #include <sys/types.h>
-#include <sys/time.h>
-#include <wait.h>
+#include <errno.h>
+
 #endif
