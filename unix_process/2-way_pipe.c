@@ -7,11 +7,11 @@ int main()
 {
 	int p1[2];//child(write[1])->parent(read[0])
 	int p2[2];//parent(write[1])->child(read[0])
-	if (p1[2] == -1)
+	if (pipe(p1) == -1)
 	{
 		return 1;
 	}
-	if (p2[2]== -1)
+	if (pipe(p2)== -1)
 	{
 		return 1;
 	}
@@ -50,15 +50,14 @@ int main()
 		{
 			return 5;
 		}
-		printf("wrote %d", y);
 		if (read(p1[0], &y, sizeof(y)) == -1)
 		{
 			return 6;
 		}
 		printf("read the result:%d\n ", y);
+		wait(NULL);
 		close(p1[0]);
 		close(p2[1]);
-		wait(NULL);
 	}
 	return 0;
 }
