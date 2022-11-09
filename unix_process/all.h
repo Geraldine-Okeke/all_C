@@ -11,4 +11,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <time.h>
+#include <signal.h>
+int _putchar(char c);
 #endif
